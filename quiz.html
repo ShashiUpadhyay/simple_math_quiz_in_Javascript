@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var total = 0;
+            var correct = 0;
+            var wrong = 0;
+            
+            function integer_addition(){
+                var first_int = Math.floor((Math.random() * 9) + 1);
+                var second_int = Math.floor((Math.random() * 9) + 1);
+                var actual_output = first_int + second_int;
+                var output_integer_addition = prompt(first_int+" + "+second_int+" = ","");
+               if(output_integer_addition == null || output_integer_addition == ""){
+               }else{
+                   if(output_integer_addition == actual_output){
+                       total++;
+                       ++correct;
+                       alert("Correct answer.\n"+"Total : "+total+"\n"+"Correct : "+correct+"\n"+"Wrong : "+wrong);
+                   }else{
+                       ++wrong;
+                       total++;
+                       alert("Wrong answer.\n"+"The correct answer is "+actual_output+"\n"+"Total : "+total+"\n"+"Correct : "+correct+"\n"+"Wrong  : "+wrong);
+                   }
+               }
+            }
+        
+        function integer_subtraction(){
+            var first_int = Math.floor((Math.random() * 9) + 1);
+            var second_int = Math.floor((Math.random() * 9) + 1);
+            var actual_output = first_int - second_int;
+            var output_integer_subtraction = prompt(first_int+" - "+second_int+" = ","");
+            if(output_integer_subtraction == null || output_integer_subtraction == ""){
+            }else{
+                if(output_integer_subtraction == actual_output){
+                    total++;
+                    ++correct;
+                    alert("Correct answer.\n"+"Total : "+total+"\n"+"Correct : "+correct+"\n"+"Wrong : "+wrong);
+                }else{
+                    ++wrong;
+                    total++;
+                    alert("Wrong answer.\n"+"The correct answer is "+actual_output+"\n"+"Total : "+total+"\n"+"Correct : "+correct+"\n"+"Wrong : "+wrong);
+                }
+
+            }
+        }
+        
+        function float_addition(){
+            var int_part_first = Math.floor((Math.random() * 9) + 1);
+            var int_part_second = Math.floor((Math.random() * 9) + 1);
+            var decimal_part_first = Math.floor((Math.random() * 9) + 1);
+            var decimal_part_second = Math.floor((Math.random() * 9) + 1);
+            var first_float = parseFloat(int_part_first.toString().concat(".").concat(decimal_part_first.toString()));
+            var second_float = parseFloat(int_part_second.toString().concat(".").concat(decimal_part_second.toString()));
+            var actual_output = first_float + second_float;
+            var output_float_addition = prompt(first_float+" + "+second_float+" = ","");
+            if(output_float_addition == null || output_float_addition == ""){
+                
+            }else{
+                if(output_float_addition == actual_output.toFixed(1)){
+                    total++;
+                    ++correct;
+                    alert("Correct answer.\n"+"Total : "+total+"\n"+"Correct : "+correct+"\n"+"Wrong : "+wrong);
+                }else{
+                    ++wrong;
+                    total++;
+                    alert("Wrong answer.\n"+"The correct answer is "+actual_output.toFixed(1)+"\n"+"Total : "+total+"\n"+"Correct : "+correct+"\n"+"Wrong : "+wrong);
+                }
+            }
+        }
+        
+        
+        function float_subtraction(){
+            var int_part_first = Math.floor((Math.random() * 9) + 1);
+            var int_part_second = Math.floor((Math.random() * 9) + 1);
+            var decimal_part_first = Math.floor((Math.random() * 9) + 1);
+            var decimal_part_second = Math.floor((Math.random() * 9) + 1);
+            var first_float = parseFloat(int_part_first.toString().concat(".").concat(decimal_part_first.toString()));
+            var second_float = parseFloat(int_part_second.toString().concat(".").concat(decimal_part_second.toString()));
+            var actual_output = first_float - second_float;
+            var output_float_subtraction = prompt(first_float+" - "+second_float+" = ","");
+            if(output_float_subtraction == null || output_float_subtraction == ""){
+            }else{
+                if(output_float_subtraction == actual_output.toFixed(1)){
+                    total++;
+                    ++correct;
+                    alert("Correct answer.\n"+"Total : "+total+"\n"+"Correct : "+correct+"\n"+"Wrong : "+wrong);
+                }else{
+                    ++wrong;
+                    total++;
+                    alert("Wrong answer.\n"+"The correct answer is "+actual_output.toFixed(1)+"\n"+"Total : "+total+"\n"+"Correct : "+correct+"\n"+"Wrong : "+wrong);
+                }
+            }
+        }
+        
+        function complex_addition(){
+            var complex_first_const = Math.floor((Math.random() * 9) + 1);
+            var complex_second_const = Math.floor((Math.random() * 9) + 1);
+            var complex_first_var = Math.floor((Math.random() * 9) + 1);
+            var complex_second_var = Math.floor((Math.random() * 9) + 1);
+            
+            var actual_output_const = complex_first_const + complex_second_const;
+            var actual_output_var = complex_first_var + complex_second_var;
+           
+            var actual_output = actual_output_const.toString().concat("+").concat(actual_output_var.toString()).concat("i");
+            
+            var output_float_complex_addition =
+            prompt("("+complex_first_const+" + "+complex_first_var+"i)"+" + ("+ complex_second_const+"+"+complex_second_var+"i)","");
+            if(output_float_complex_addition == null || output_float_complex_addition == ""){
+
+            }else{
+                if(output_float_complex_addition == actual_output){
+                    total++;
+                    ++correct;
+                    alert("Correct answer.\n"+"Total : "+total+"\n"+"Correct : "+correct+"\n"+"Wrong : "+wrong);
+                }else{
+                    ++wrong;
+                    total++;
+                    alert("Wrong answer.\n"+"The correct answer is "+actual_output+"\n"+"Total : "+total+"\n"+"Correct : "+correct+"\n"+"Wrong : "+wrong);
+                }
+            }
+        }
+        
+        function complex_subtraction(){
+            var complex_first_const = Math.floor((Math.random() * 9) + 1);
+            var complex_second_const = Math.floor((Math.random() * 9) + 1);
+            var complex_first_var = Math.floor((Math.random() * 9) + 1);
+            var complex_second_var = Math.floor((Math.random() * 9) + 1);
+            
+            var actual_output_const = complex_first_const - complex_second_const;
+            var actual_output_var = complex_first_var - complex_second_var;
+            
+            var actual_output;
+            if(actual_output_var > 0){
+                actual_output = actual_output_const.toString().concat("+").concat(actual_output_var.toString()).concat("i");
+            }else if(actual_output_var == 0){
+                actual_output = actual_output_const.toString().concat("+").concat("0i");
+            }else{
+                actual_output = actual_output_const.toString().concat(actual_output_var.toString()).concat("i");
+            }
+            
+            
+            var output_float_complex_addition =
+            prompt("("+complex_first_const+" + "+complex_first_var+"i)"+" - ("+ complex_second_const+"+"+complex_second_var+"i)","");
+            if(output_float_complex_addition == null || output_float_complex_addition == ""){
+            }else{
+                if(output_float_complex_addition == actual_output){
+                    total++;
+                    ++correct;
+                    alert("Correct answer.\n"+"Total : "+total+"\n"+"Correct : "+correct+"\n"+"Wrong : "+wrong);
+                }else{
+                    ++wrong;
+                    total++;
+                    alert("Wrong answer.\n"+"The correct answer is "+actual_output+"\n"+"Total : "+total+"\n"+"Correct  : "+correct+"\n"+"Wrong : "+wrong);
+                }
+            }
+        }
+        
+        function check_score(){
+            alert("Total : "+total+"\n"+"Correct : "+correct+"\n"+"Wrong : "+wrong);
+        }
+        
+        function reset_score(){
+            total=0;
+            correct=0;
+            wrong=0;
+            alert("Score Board is reset !!!");
+        }
+        
+        function extra_addition(){
+            var complex_first_const = Math.floor(Math.random() * (1 - 0 + 1)) + 0;
+            var complex_second_const = Math.floor(Math.random() * (1 - 0 + 1)) + 0;
+            var complex_first_var = Math.floor(Math.random() * (1 - 0 + 1)) + 0;
+            var complex_second_var = Math.floor(Math.random() * (1 - 0 + 1)) + 0;
+            
+            var actual_output_const = complex_first_const + complex_second_const;
+            var actual_output_var = complex_first_var + complex_second_var;
+            
+            var actual_output;
+            
+            if((actual_output_const == 0) && (actual_output_var == 0)){
+                actual_output = 0;
+            }else if((actual_output_const != 0) && (actual_output_var == 0)){
+                actual_output = actual_output_const;
+            }else if((actual_output_const == 0) && (actual_output_var != 0)){
+                actual_output = actual_output_var.toString().concat("i");
+            }else{
+                actual_output = actual_output_const.toString().concat("+").concat(actual_output_var.toString()).concat("i");
+            }
+            var output_extra_addition =
+            prompt("("+complex_first_const+" + "+complex_first_var+"i)"+" + ("+ complex_second_const+"+"+complex_second_var+"i)","");
+            
+            if(output_extra_addition == null || output_extra_addition == ""){
+            }else{
+                if(output_extra_addition == actual_output){
+                    ++total;
+                    ++correct;
+                    alert("Correct answer.\n"+"Total : "+total+"\n"+"Correct : "+correct+"\n"+"Wrong : "+wrong);
+                }else{
+                    ++wrong;
+                    ++total;
+                    alert("Wrong answer.\n"+"The correct answer is "+actual_output+"\n"+"Total : "+total+"\n"+"Correct : "+correct+"\n"+"Wrong : "+wrong);
+                }
+            }
+        }
+        
+        function extra_subtraction(){
+            var complex_first_const = Math.floor(Math.random() * (1 - 0 + 1)) + 0;
+            var complex_second_const = Math.floor(Math.random() * (1 - 0 + 1)) + 0;
+            var complex_first_var = Math.floor(Math.random() * (1 - 0 + 1)) + 0;
+            var complex_second_var = Math.floor(Math.random() * (1 - 0 + 1)) + 0;
+            
+            var actual_output_const = complex_first_const - complex_second_const;
+            var actual_output_var = complex_first_var - complex_second_var;
+            
+            var actual_output;
+            
+            if((actual_output_const == 0) && (actual_output_var == 0)){
+                actual_output = 0;
+            }else if((actual_output_const != 0) && (actual_output_var == 0)){
+                actual_output = actual_output_const;
+            }else if((actual_output_const == 0) && (actual_output_var != 0)){
+                actual_output = actual_output_var.toString().concat("i");
+            }else{
+                if(actual_output_var > 0){
+                    actual_output = actual_output_const.toString().concat("+").concat(actual_output_var.toString()).concat("i");
+                }else{
+                    actual_output = actual_output_const.toString().concat(actual_output_var.toString()).concat("i");
+                }
+                
+            }
+            var output_extra_subtraction =
+            prompt("("+complex_first_const+" + "+complex_first_var+"i)"+" - ("+ complex_second_const+"+"+complex_second_var+"i)","");
+            
+            if(output_extra_subtraction == null || output_extra_subtraction == ""){
+            }else{
+                if(output_extra_subtraction == actual_output){
+                    ++total;
+                    ++correct;
+                    alert("Correct answer.\n"+"Total : "+total+"\n"+"Correct : "+correct+"\n"+"Wrong : "+wrong);
+                }else{
+                    ++wrong;
+                    ++total;
+                    alert("Wrong answer.\n"+"The correct answer is "+actual_output+"\n"+"Total : "+total+"\n"+"Correct : "+correct+"\n"+"Wrong : "+wrong);
+                }
+            }
+        }
+        
+        </script>
+    </head>
+    <body>
+        <table align="center">
+            <tr>
+                <td colspan="2" align="center">
+                    <h2>Simple Math Quiz</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" style="width: 160px; height: 30px;" onclick="integer_addition()">
+                        <strong>Integer Addition</strong>
+                    </button>
+                </td>
+                <td>
+                    <button type="button" style="width: 160px; height: 30px;" onclick="integer_subtraction()">
+                        <strong>Integer Subtraction</strong>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" style="width: 160px; height: 30px;" onclick="float_addition()">
+                        <strong>Float Addition</strong>
+                    </button>
+                </td>
+                <td>
+                    <button type="button" style="width: 160px; height: 30px;" onclick="float_subtraction()">
+                        <strong>Float Subtraction</strong>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" style="width: 160px; height: 30px;" onclick="complex_addition()">
+                        <strong>Complex Addition</strong>
+                    </button>
+                </td>
+                <td>
+                    <button type="button" style="width: 160px; height: 30px;" onclick="complex_subtraction()">
+                        <strong>Complex Subtraction</strong>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" style="width: 160px; height: 30px;" onclick="extra_addition()">
+                        <strong>Extra Addition</strong>
+                    </button>
+                </td>
+                <td>
+                    <button type="button" style="width: 160px; height: 30px;" onclick="extra_subtraction()">
+                        <strong>Extra Subtraction</strong>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" style="width: 160px; height: 30px;" onclick="check_score()">
+                        <strong>Check Score</strong>
+                    </button>
+                </td>
+                <td>
+                    <button type="button" style="width: 160px; height: 30px;" onclick="reset_score()">
+                        <strong>Reset Score</strong>
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
